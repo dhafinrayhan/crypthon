@@ -22,7 +22,7 @@ def vigenere(P: str, K: str, decrypt=False) -> str:
     return C
 
 
-def auto_key_vigenere(P: str, K: str, decrypt=False) -> str:
+def autokey_vigenere(P: str, K: str, decrypt=False) -> str:
     P = tools.filter_alpha(P).upper()
     K = tools.filter_alpha(K).upper()
     C = ''
@@ -120,7 +120,7 @@ def playfair(P: str, K: str, decrypt=False) -> str:
         else:
             P_bigram.append(P[i:i+2])
             i += 2
-    
+
     C = ''
     mode = -1 if decrypt else 1
 
